@@ -33,7 +33,7 @@ for tis = 1:length(list_tissues)
     
     idx_gene = NaN(length(anno.chr),2); % new | old
     for i = 1:length(anno.chr)
-        temp_idx = strmatch(anno.gene_ids(i),temp_exp.textdata(2:end,1),'exact');
+        temp_idx = strmatch(anno.gene_ids(i,2),temp_exp.textdata(2:end,1),'exact');
         if length(temp_idx) == 1,
             idx_gene(i,:) = [i temp_idx];
         end
